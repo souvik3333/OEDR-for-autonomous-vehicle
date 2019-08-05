@@ -1,0 +1,37 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-TestSeries 2
+FileCreator = CarMaker 8.0.1 2019-6-26
+Description:
+LastChange = 2019-08-05 12:06:02 Souvik
+StartTime = 2019-08-05 12:03:22
+EndTime = 2019-08-05 12:05:14
+ReportTemplate =
+Step.0 = Settings
+Step.0.Name = Global Settings
+Step.1 = TestRun
+Step.1.Name = My _test_run/testCity3
+Step.1.Param.0 = Speed NValue
+Step.1.Param.1 = T01 NValue
+Step.1.Param.2 = T02 NValue
+Step.1.Param.3 = T06 NValue
+Step.1.Param.4 = T07 NValue
+Step.1.Param.5 = T01RO {}
+Step.1.Param.6 = T02R {}
+Step.1.Param.7 = T02RO {}
+Step.1.Param.8 = T06R {}
+Step.1.Param.9 = T06RO {}
+Step.1.Var.0.Name = Variation 0
+Step.1.Var.0.Param = 20 30 10 20 50 50 0 100 0 150 {}
+Step.1.Var.0.Result = err
+Step.1.Var.0.ResDate = 1564983144
+Step.1.Var.0.Log.0.Time = 0.000
+Step.1.Var.0.Log.0.Kind = err
+Step.1.Var.0.Log.0.Text = Simulation stopped by user
+Step.1.Var.1.Name = Variation 1
+Step.1.Var.1.Param = 30 50 40 60 20 {} {} {} {} {}
+Step.1.Var.1.Result = err
+Step.1.Var.1.ResDate = 1564983314
+Step.1.Var.1.ManLst = 0
+Step.1.Var.1.Log.0.Time = 530.096
+Step.1.Var.1.Log.0.Kind = err
+Step.1.Var.1.Log.0.Text = Simulation stopped by user
