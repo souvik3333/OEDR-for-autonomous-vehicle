@@ -4,6 +4,12 @@ import argparse
 import numpy as np
 import cv2
 
+parser=argparse.ArgumentParser()
+parser.add_argument('--training_file', help='path to train file',default="train.p")
+parser.add_argument('--testing_file', help='path to test file',default="valid.p")
+parser.add_argument('--train_batch_size', help='train batch size',default=16)
+parser.add_argument('--test_batch_size', help='test batch size',default=1000)
+
 def reshape_raw_images(imgs):
     """Given 4D images (number, heigh, weight, channel), this
     function grayscales and returns (number, height, weight, 1) images"""
@@ -31,10 +37,7 @@ def load_dataset(training_file,testing_file):
     return (X_train,y_train,X_valid,y_valid)
 
 def read_args(train_batch_size,test_batch_size):
-    parser=argparse.ArgumentParser()
-    parser.add_argument('--training_file', help='path to train file')
-    parser.add_argument('--testing_file', help='path to test file')
-    parser.add_argument('--train_batch_size', help='train batch size',default=train_batch_size)
-    parser.add_argument('--test_batch_size', help='test batch size',default=train_batch_size)
+    args=parser.parse_args()
+    print(args.training_file)
 
     return (training_file,testing_file,train_batch_size,test_batch_size)
