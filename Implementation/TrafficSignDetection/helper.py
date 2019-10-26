@@ -9,6 +9,7 @@ parser.add_argument('--training_file', help='path to train file',default="train.
 parser.add_argument('--testing_file', help='path to test file',default="valid.p")
 parser.add_argument('--train_batch_size', help='train batch size',default=16)
 parser.add_argument('--test_batch_size', help='test batch size',default=1000)
+parser.add_argument('--epoch', help='number of epoch to train',default=20)
 
 def reshape_raw_images(imgs):
     """Given 4D images (number, heigh, weight, channel), this
@@ -43,5 +44,6 @@ def read_args(train_batch_size,test_batch_size):
     testing_file = args.testing_file
     train_batch_size = args.train_batch_size
     test_batch_size = args.test_batch_size
+    epoch = args.epoch
 
-    return (training_file,testing_file,train_batch_size,test_batch_size)
+    return (training_file,testing_file,train_batch_size,test_batch_size,epoch)

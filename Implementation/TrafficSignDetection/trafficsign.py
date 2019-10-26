@@ -12,11 +12,12 @@ from matplotlib.pyplot import *
 import helper
 
 if torch.cuda.is_available():
+    # check if cuda is available
     torch.cuda.set_device(0) 
     torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
 # reads input args
-training_file,testing_file,train_batch_size,test_batch_size = helper.read_args(16,1000)
+training_file,testing_file,train_batch_size,test_batch_size, epochs = helper.read_args(16,1000)
 # loads data
 X_train,y_train,X_valid,y_valid = helper.load_dataset(training_file,testing_file)
 
@@ -185,19 +186,24 @@ def test(model, epoch, test_loader):
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
 
+
 torch.manual_seed(123)
 
+# loading model
+
 model = LeNet()
+
+# setting parameters for training
 
 lr = 0.001
 momentum=0.5
 optimizer = optim.Adam(model.parameters(), lr=lr)
 
-train_batch_size = 32
-test_batch_size = 1000
+# loading data
 train_loader, test_loader = load_dataLoader(train_batch_size, test_batch_size)
 
-epochs = 13
+
+# tarining and testing
 log_interval = 100
 for epoch in range(1, epochs + 1):
     train(model, optimizer, epoch, train_loader, log_interval=log_interval)
