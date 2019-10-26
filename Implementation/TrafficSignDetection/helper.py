@@ -30,14 +30,18 @@ def load_dataset(training_file,testing_file):
     """
     with open(training_file, mode='rb') as f:
         train = pickle.load(f)
-    with open(validation_file, mode='rb') as f:
+    with open(testing_file, mode='rb') as f:
         valid = pickle.load(f)
     X_train, y_train = train['features'], train['labels']
     X_valid, y_valid = valid['features'], valid['labels']
     return (X_train,y_train,X_valid,y_valid)
 
 def read_args(train_batch_size,test_batch_size):
-    args=parser.parse_args()
-    print(args.training_file)
+    args = parser.parse_args()
+    
+    training_file = args.training_file
+    testing_file = args.testing_file
+    train_batch_size = args.train_batch_size
+    test_batch_size = args.test_batch_size
 
     return (training_file,testing_file,train_batch_size,test_batch_size)
