@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-"""trafficSign.ipynb
-
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -10,55 +6,30 @@ from torch.autograd import Variable
 from PIL import Image
 import torch.nn.functional as F
 import numpy as np
-import pickle
 import cv2
 from torch.utils.data import Dataset, DataLoader
 from matplotlib.pyplot import *
+import helper
 
-torch.cuda.set_device(0) 
-torch.set_default_tensor_type('torch.cuda.FloatTensor')
+if torch.cuda.is_available():
+    torch.cuda.set_device(0) 
+    torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
-import pickle
+# reads input args
+training_file,testing_file,train_batch_size,test_batch_size = helper.read_args(16,1000)
+# loads data
+X_train,y_train,X_valid,y_valid = helper.load_dataset(training_file,testing_file)
 
-training_file = 'train.p'
-validation_file= 'valid.p'
-testing_file = 'test.p'
-
-with open(training_file, mode='rb') as f:
-    train = pickle.load(f)
-with open(validation_file, mode='rb') as f:
-    valid = pickle.load(f)
-with open(testing_file, mode='rb') as f:
-    test = pickle.load(f)
-
-X_train, y_train = train['features'], train['labels']
-X_valid, y_valid = valid['features'], valid['labels']
-X_test, y_test = test['features'], test['labels']
-print ('Data loaded')
-
-def reshape_raw_images(imgs):
-    """Given 4D images (number, heigh, weight, channel), this
-    function grayscales and returns (number, height, weight, 1) images"""
-    def gray(src):
-        if src.dtype == np.uint8:
-            src = np.array(src/255.0, dtype=np.float32)
-        dst = cv2.cvtColor(src, cv2.COLOR_RGB2GRAY)
-        return dst.reshape(32,32,1)
-    norms = [gray(img) for img in imgs]
-    return np.array(norms)
-    
-features_train = reshape_raw_images(X_train)
+# pre-process the data
+features_train = helper.reshape_raw_images(X_train)
 labels_train   = torch.tensor(y_train, dtype=torch.long)
 features_train = np.transpose(features_train, (0,3, 1, 2))
 
 
-features_valid = reshape_raw_images(X_valid)
+features_valid = helper.reshape_raw_images(X_valid)
 features_valid = np.transpose(features_valid,(0,3,1,2))
 labels_valid   = torch.tensor(y_valid, dtype=torch.long)
 
-features_test  = reshape_raw_images(X_test)
-features_test = np.transpose(features_test,(0,3,1,2))
-labels_test    = y_test
 
 class train_dataset():
     """ Train Dataset loader"""
@@ -114,7 +85,7 @@ class LeNet(nn.Module):
         self.fc3 = nn.Linear(512, 43)
 
     def forward(self, x):
-        # pool size = 2
+    
         x = F.relu(self.conv1(x))
         
         x = F.relu(self.conv2(x))
@@ -125,7 +96,6 @@ class LeNet(nn.Module):
         
         x = F.max_pool2d(x, 2)
         
-#         x = F.max_pool2d(F.relu(self.conv3(x)), 2)
         # flatten as one dimension
         x = x.view(x.size()[0], -1)
         # input dim = 16*5*5, output dim = 120
@@ -136,7 +106,7 @@ class LeNet(nn.Module):
         x = self.fc3(x)
         return x
 
-def load_data(train_batch_size, test_batch_size):
+def load_dataLoader(train_batch_size, test_batch_size):
     # Fetch test data: total 34799 samples
     train_loader=DataLoader(dataset=train_dataset(),
                           batch_size=train_batch_size,
@@ -159,8 +129,6 @@ def train(model, optimizer, epoch, train_loader, log_interval):
     # Iterate over batches of data
     for batch_idx, (data, target) in enumerate(train_loader):
         # Wrap the input and target output in the `Variable` wrapper
-#         print(data.shape)
-#         print(type(target))
         data, target = Variable(data), Variable(target)
 
         # Clear the gradients, since PyTorch accumulates them
@@ -227,7 +195,7 @@ optimizer = optim.Adam(model.parameters(), lr=lr)
 
 train_batch_size = 32
 test_batch_size = 1000
-train_loader, test_loader = load_data(train_batch_size, test_batch_size)
+train_loader, test_loader = load_dataLoader(train_batch_size, test_batch_size)
 
 epochs = 13
 log_interval = 100
