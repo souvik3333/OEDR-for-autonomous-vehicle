@@ -1,4 +1,4 @@
-# Traffic Light Detection Module
+# Traffic Light Classification Module
 ## What is it  
 something  
 ## How to get

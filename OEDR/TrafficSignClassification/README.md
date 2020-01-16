@@ -1,4 +1,4 @@
-# Traffic Sign Detection Module
+# Traffic Sign Classification Module
 ## What is it  
 something  
 ## How to get
