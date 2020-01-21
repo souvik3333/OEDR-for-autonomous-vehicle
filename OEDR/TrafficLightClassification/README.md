@@ -1,5 +1,4 @@
 # Traffic Light Classification Module
-# Traffic Light Classification Module
 
 ## About
 This module is dedicated to classifying the detected traffic lights into red, yellow and green.
@@ -19,11 +18,13 @@ The following steps are involved in the image pre-processing:
 3. Finally, the unnecessary information and noise in the 32x32 image will be removed with the help of a filter. In this we have used a Gaussian Filter which is a linear filter.
 
 ### Feature Extraction
+The brightness feature is used to detect illuminated section of the image.
+1. First, the RGB image is converted to HSV image.
+1. Then, the image is divided into three segments (top, middle and bottom) for the corresponding traffic lights.
+2. Finally, we calculate the average brightness values of each segment.
 
 ### Prediction
-
-## License
+This step compares the average brightness of the three segments and predicts the light corresponding to the highest brightness as the illuminated one.
 
 ## Dependencies
-
-
+Python 3.6.8
