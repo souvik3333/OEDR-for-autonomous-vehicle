@@ -1,15 +1,29 @@
 # Traffic Light Classification Module
-## What is it  
-something  
-## How to get
-easy like that  
-## Main features
-maybe something
+# Traffic Light Classification Module
+
+## About
+This module is dedicated to classifying the detected traffic lights into red, yellow and green.
+
 ## Architecture
-too lazy to add img
-## License
-sure just copy
+The input, from the YOLO module detecting the traffic light, is processed through the pipeline with the following steps:
+	Image Pre-processing
+	Feature Extraction
+	Prediction
+(image)
+
 ## Documentation
-nah just read the code
+### Image Pre-processing
+The following steps are involved in the image pre-processing:
+1. The traffic light module needs the input image to be of constant size. So, first the image will be normalised to a 32x32 image.
+2. Next, we crop 4 rows from both upper and lower end of the image as the whole traffic light board is not needed.
+3. Finally, the unnecessary information and noise in the 32x32 image will be removed with the help of a filter. In this we have used a Gaussian Filter which is a linear filter.
+
+### Feature Extraction
+
+### Prediction
+
+## License
+
 ## Dependencies
-Python 3.6.8  
+
+
