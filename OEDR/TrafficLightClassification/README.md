@@ -5,9 +5,10 @@ This module is dedicated to classifying the detected traffic lights into red, ye
 
 ## Architecture
 The input, from the YOLO module detecting the traffic light, is processed through the pipeline with the following steps:
-	Image Pre-processing
-	Feature Extraction
-	Prediction
+1. Image Pre-processing
+2. Feature Extraction
+3. Prediction
+
 (image)
 
 ## Documentation
