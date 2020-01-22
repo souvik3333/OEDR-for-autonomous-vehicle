@@ -33,3 +33,4 @@ Finally, the outputs of all the modules are augmented to provide an augmented vi
 Though not integrated, we have also implemented the LIDAR object clustering module for better detection.
 
 ## Dependencies
+The dependencies can be installed with "environment.yml" file.
