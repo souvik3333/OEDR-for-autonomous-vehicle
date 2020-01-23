@@ -1,16 +1,22 @@
 # Traffic Sign Classification Module
-## What is it  
-something  
-## How to get
-easy like that  
-## Main features
-maybe something
+
+## About
+This module is dedicated to classifying the detected traffic lights into red, yellow and green.
+
 ## Architecture
-too lazy to add img
-## License
-sure just copy
+The input, from the YOLO module detecting the traffic signs, is processed through the pipeline with the following steps:
+1. Image Pre-processing
+2. Detection Module
+(image)
+
 ## Documentation
-nah just read the code
+### Image Pre-processing
+The following steps are involved in the image pre-processing:
+1. RGB input image is converted into grey scale to reduce complexity (reducing 3 RGB chanels to 1 grey scale).
+2. The traffic sign module needs the input image to be of constant size. So, the image will be normalised to a 32x32 image.
+
+### Detection Module
+ The architecture consists of three convolutional layers, two average pooling layers, followed by a flattening convolutional layer, then two fully-connected layers and finally a softmax classifier.
 ## Dependencies
 Python 3.6.8  
 Pytorch 1.3.0+cu100  
