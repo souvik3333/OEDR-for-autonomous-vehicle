@@ -7,8 +7,8 @@ The depth(Z) can be calculated by using the formula
 
 Where,  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f  denotes the focal length of the stereo cameras  
-&#9; b  denotes the base distance between the two cameras  
-&#9; d  denotes the disparity values between the images from the two cameras.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b  denotes the base distance between the two cameras  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d  denotes the disparity values between the images from the two cameras.  
 
 The implementation of the Stereo Depth Estimation can divided into the following steps,
 1. Calulating the disparity map/values.
