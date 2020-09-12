@@ -8,3 +8,5 @@ The input, from the YOLO module detecting the traffic light, is processed throug
 1. Image Pre-processing
 2. Feature Extraction
 3. Prediction
+
+Detailed documentation can be found <a href="./../../doc/Traffic Light Classification Subsystem.md">here</a>.
