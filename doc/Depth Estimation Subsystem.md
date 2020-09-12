@@ -5,9 +5,9 @@ Stereo depth estimation employs the concept of triangulation i.e. the process of
 The depth(Z) can be calculated by using the formula
 <img src="https://render.githubusercontent.com/render/math?math=Z = \frac{fb}{d}">
 
-Where, 	
-		$f$ denotes the focal length of the stereo cameras
-		$b$ denotes the base distance between the two cameras
+Where, 	(space, space)
+		$f$ denotes the focal length of the stereo cameras(space, space)
+		$b$ denotes the base distance between the two cameras(space)
 		$d$ denotes the disparity values between the images from the two cameras.
 
 The implementation of the Stereo Depth Estimation can divided into the following steps,
