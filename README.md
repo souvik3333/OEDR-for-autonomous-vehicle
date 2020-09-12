@@ -5,7 +5,7 @@ The key aspects of conventional autonomous driving such as cost of infrastructur
 ## Architecture
 This project is dedicated to developing an Object and Event Detection and Recognition (OEDR) module. The following is the architecture of the OEDR Module integrated with IPG-CarMaker.
 
-![Alt text](images/OEDR.png?raw=true "Title")
+![Alt text](images/doc/OEDR.png?raw=true "Title")
 
 ### IPG Movie
 IPG-Movie, an application launched through IPG-CarMaker, streams images from the stereoscopic cameras through the specified port.
