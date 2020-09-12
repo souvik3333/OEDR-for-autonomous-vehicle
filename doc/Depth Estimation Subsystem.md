@@ -3,7 +3,7 @@
 
 Stereo depth estimation employs the concept of triangulation i.e. the process of determining the location of a point by forming triangles to it from known points. Here the location of the object is determined using the location of the cameras as known points, so the distance of the object can be calculated as the cameras are fixed on the vehicle-no relative motion with respect to the vehicle.
 The depth(Z) can be calculated by using the formula  
-<img src="https://render.githubusercontent.com/render/math?math=Z = \frac{fb}{d}" width="100" style="vertical-align:middle">
+<pstyle="text-align:center"><img src="https://render.githubusercontent.com/render/math?math=Z = \frac{fb}{d}" width="100"style="vertical-align:bottom"></p>
 
 Where,  
 &nbsp;&nbsp;&nbsp; f  denotes the focal length of the stereo cameras  
