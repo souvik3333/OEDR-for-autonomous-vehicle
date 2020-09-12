@@ -1,5 +1,5 @@
 # Documentation
-![Alt text](images/depth.png?raw=true "Title")
+![Alt text](images/Traffic_Light.png?raw=true "Title")
 ## Image Pre-processing
 The following steps are involved in the image pre-processing:
 1. The traffic light module needs the input image to be of constant size. So, first the image will be normalised to a 32x32 image.
