@@ -19,5 +19,5 @@ A histogram based search is applied to the combined binary image to identify the
 First, a histogram is generated from which two most prominent peaks are identified as bases of the lanes. Then, a sliding window is used to identify the lanes till the top of the image. Finally, reverse propective transformation is applied to convert the detected lane co-ordinates with respect to the initial image.
 
 ## Calculating the radius of curvature
-The lane co-ordinates detected in the prospective transformed image are used to calculate the radius of curvature. Here, the lane co-ordinates are fit into a 2nd order polynomial equation to calculate the radius of curvature.
-<img src="https://render.githubusercontent.com/render/math?math=R_{curve}=\dfrac{[1+(\dfrac{dy}{dx})^2]^{3/2}}{|\dfrac{d^2x}{dy^2}|}" width="100">
+The lane co-ordinates detected in the prospective transformed image are used to calculate the radius of curvature. Here, the lane co-ordinates are fit into a 2nd order polynomial equation to calculate the radius of curvature.  
+<img src="https://render.githubusercontent.com/render/math?math=R_{curve}=\dfrac{[1+(\dfrac{dy}{dx})^2]^{3/2}}{|\dfrac{d^2x}{dy^2}|}" width="200">
