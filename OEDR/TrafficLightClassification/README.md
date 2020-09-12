@@ -1,4 +1,4 @@
-# Traffic Light Classification Module
+# Traffic Light Classification Subsystem
 
 ## About
 This module is dedicated to classifying the detected traffic lights into red, yellow and green.
@@ -9,7 +9,7 @@ The input, from the YOLO module detecting the traffic light, is processed throug
 2. Feature Extraction
 3. Prediction
 
-(image)
+![Alt text](../../docs/Traffic Light Classification Subsystem.md?raw=true "Title")
 
 ## Documentation
 ### Image Pre-processing
@@ -26,6 +26,3 @@ The brightness feature is used to detect illuminated section of the image.
 
 ### Prediction
 This step compares the average brightness of the three segments and predicts the light corresponding to the highest brightness as the illuminated one.
-
-## Dependencies
-Python 3.6.8
