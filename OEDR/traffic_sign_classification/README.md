@@ -1,4 +1,4 @@
-# Traffic Sign Classification Module
+# Traffic Sign Classification Subsytem
 
 ## About
 This module is dedicated to classifying the detected traffic lights into red, yellow and green.
