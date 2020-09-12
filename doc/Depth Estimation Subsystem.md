@@ -3,12 +3,12 @@
 
 Stereo depth estimation employs the concept of triangulation i.e. the process of determining the location of a point by forming triangles to it from known points. Here the location of the object is determined using the location of the cameras as known points, so the distance of the object can be calculated as the cameras are fixed on the vehicle-no relative motion with respect to the vehicle.
 The depth(Z) can be calculated by using the formula  
-<pstyle="text-align:center"><img src="https://render.githubusercontent.com/render/math?math=Z = \frac{fb}{d}" width="100"style="vertical-align:bottom"></p>
+<p style="text-align:center"><img src="https://render.githubusercontent.com/render/math?math=Z = \frac{fb}{d}" width="100"style="vertical-align:bottom"></p>
 
 Where,  
-&nbsp;&nbsp;&nbsp; f  denotes the focal length of the stereo cameras  
-&nbsp;&nbsp;&nbsp; b  denotes the base distance between the two cameras  
-&nbsp;&nbsp;&nbsp; d  denotes the disparity values between the images from the two cameras.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f  denotes the focal length of the stereo cameras  
+> b  denotes the base distance between the two cameras  
+>> d  denotes the disparity values between the images from the two cameras.  
 
 The implementation of the Stereo Depth Estimation can divided into the following steps,
 1. Calulating the disparity map/values.
