@@ -8,4 +8,4 @@ The input, from the YOLO module detecting the traffic signs, is processed throug
 1. Image Pre-processing
 2. Detection Module
 
-Detailed documentation can be found <a href="./../../doc/Traffic Sign Subsystem.md">here</a>.
+Detailed documentation can be found <a href="./../../doc/Traffic Sign Classification Subsystem.md">here</a>.
