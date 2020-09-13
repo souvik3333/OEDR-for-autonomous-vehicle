@@ -3,3 +3,22 @@ Project dependencies can be installed using <a href="https://anaconda.org/">Anac
 Detailed steps involving this process can be found 
 <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file">here</a>.
 # Project Structure
+>OEDR
+>>carmaker_integration
+
+>>depth_estimation
+
+>>lane_detection
+
+>>object_detection/YoloV3
+
+>>traffic_light_classification
+
+>>traffic_sign_classification
+
+>doc
+>>images
+
+>>presentation
+
+>>Depth Estimation Subsystem.md
