@@ -30,4 +30,4 @@ This module is for estimating the depth of different detected objects. As this m
 Finally, the outputs of all the modules are augmented to provide an augmented video output with all the detections and classifications available.
 
 ## Dependencies
-The dependencies can be installed with "environment.yml" file.
+The dependencies can be installed with "environment.yml" file. Detailed information can be found in <a href="./doc/getting_started.md">getting_started.md</a>
