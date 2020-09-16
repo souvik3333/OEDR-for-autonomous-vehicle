@@ -20,15 +20,15 @@ Contains test images for Traffic Light Classification Subsystem.
 
 >>traffic_light_classification  
 Contains the <a href="../OEDR/traffic_light_classification/traffic_light_detection.ipynb">implementation</a> and <a href="../OEDR/traffic_light_classification/README.md">documentation</a> of Traffic Light Classification Subsystem.
->>>Data
+>>>Data  
 Contains test images for Traffic Light Classification Subsystem.
 
 >>traffic_sign_classification  
 Contains the <a href="../OEDR/traffic_sign_classification/trafficsign.py">implementation</a> and <a href="../OEDR/traffic_sign_classification/README.md">documentation</a> of Traffic Sign Classification Subsystem.
 
->doc
->>images
+>doc  
+>>images  
 Contains the architecture images of overall system and its subsystems
 
->>presentation
+>>presentation  
 Contains the presentation explaining the OEDR system.
