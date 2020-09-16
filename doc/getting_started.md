@@ -6,19 +6,29 @@ Detailed steps involving this process can be found
 >OEDR
 >>carmaker_integration
 
->>depth_estimation
 
->>lane_detection
+>>depth_estimation  
+Contains the <a href="../OEDR/depth_estimation/depth_estimation.ipynb">implementation</a> and <a href="../OEDR/depth_estimation/README.md">documentation</a> of Depth Estimation Subsystem.
 
->>object_detection/YoloV3
+>>lane_detection  
+Contains the <a href="../OEDR/lane_detection/LaneDetection.ipynb">implementation</a> and <a href="../OEDR/lane_detection/README.md">documentation</a> of Lane Detection Subsystem.
+>>>test
+Contains test images for Traffic Light Classification Subsystem.
 
->>traffic_light_classification
+>>object_detection/YoloV3  
+<a href="../OEDR/object_detection/YoloV3/readme.md">Details</a> regarding You Only Look Once Version 3.
 
->>traffic_sign_classification
+>>traffic_light_classification  
+Contains the <a href="../OEDR/traffic_light_classification/traffic_light_detection.ipynb">implementation</a> and <a href="../OEDR/traffic_light_classification/README.md">documentation</a> of Traffic Light Classification Subsystem.
+>>>Data
+Contains test images for Traffic Light Classification Subsystem.
+
+>>traffic_sign_classification  
+Contains the <a href="../OEDR/traffic_sign_classification/trafficsign.py">implementation</a> and <a href="../OEDR/traffic_sign_classification/README.md">documentation</a> of Traffic Sign Classification Subsystem.
 
 >doc
 >>images
+Contains the architecture images of overall system and its subsystems
 
 >>presentation
-
->>Depth Estimation Subsystem.md
+Contains the presentation explaining the OEDR system.
